@@ -1,0 +1,26 @@
+.index-left{
+    width: 250px;
+    float: left;
+}
+
+.index-right{
+    width: auto;
+    float: left;
+}
+
+.resource-container{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.description{
+    float: left;
+    height: 150px;
+    width: 510px;
+}
+
+.cover-img{
+    float: left;
+
+}

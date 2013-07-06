@@ -1,4 +1,74 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+<div class="container">
+
+    <div class="index-left">
+
+        <div class="left-classification">
+            <ul class="nav nav-tabs nav-stacked">
+                *{这里到时候用list遍历一个分类对象}*
+                <li>
+                    <a href="#1">
+                        系统相关
+                        <i class="icon-chevron-right pull-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#1">
+                        编程开发
+                        <i class="icon-chevron-right pull-right"></i>
+                    </a>
+                </li>
+                *{...}*
+            </ul>
+        </div>
+
+        <div class="left-hot-resource">
+
+            *{这个list，通过find把下载量大的筛选出来，用list遍历出来}*
+
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                <h4>
+                热门资源</h4>
+                </li>
+                <li><a href="#">500本热门财经电子书</a></li>
+                <li><a href="#">java(JRE7)</a></li>
+            </ul>
+
+        </div>
+        
+    </div>
+
+    <div class="index-right">
+
+        *{这个resource-container到时候也是通过list完成}*
+        <div class="resource-container">
+            <div class="resource-item">
+                <div class="description">
+                    <div class="">
+
+                    </div>
+                
+                </div>
+
+                
+                <div class="cover-img">
+                    <img src="@{'/public/images/war3.jpg'}" class="img-rounded" alt="140X140" style="width:140px;height:140px">
+                </div>
+            </div>
+        </div>
+
+        <div class="resource-container">
+            <div class="resource-item">
+                <div class="description">
+                </div>
+                <div class="cover-img">
+                    <img src="@{'/public/images/war3.jpg'}" class="img-rounded" alt="140X140" style="width:140px;height:140px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
