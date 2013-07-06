@@ -9,18 +9,49 @@
 }
 
 .resource-container{
+    height: 180px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
+.resource-item{
+    width: 100%;
+    height: 100%;
 }
 
 .description{
     float: left;
-    height: 150px;
-    width: 510px;
+    height: 100%;
+    width: 500px;
 }
 
 .cover-img{
     float: left;
+    width: 150px;
+    height: 180px;
 
+}
+.cover-img > img{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.res-title,
+.res-info,
+.res-date{
+    width: 100%;
+    height: auto;
+
+}
+
+.res-title{
+    height: 20px;
+}
+.res-info{
+    height: 130px;
+}
+.res-date{
+    height: 30px;
 }
