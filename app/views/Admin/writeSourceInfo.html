@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/writeSourceInfo.css'}">
+
+<div class="container">
+
+    <div class="release-left">
+        #{form @Admin.releaseSource(), method:'POST',id:'detailsForm'}
+            
+        #{/form}
+    </div>
+    
+    <div class="release-right">
+        <div id="img-upload">
+            <strong>图片上传的位置</strong>        
+        </div>
+    </div>
+    
+</div>

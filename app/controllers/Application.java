@@ -24,5 +24,6 @@ public class Application extends Controller {
     public static void showDetail(String id){
     	
     }
+    
 
 }

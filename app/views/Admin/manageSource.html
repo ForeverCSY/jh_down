@@ -1,0 +1,39 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/manageSource.css'}">
+
+<div class="container">
+    <div class="nav ">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">未发布</a></li>
+			<li><a href="#">已发布</a></li>
+			<li><a href="#">已删除</a></li>
+		</ul>
+	</div>
+	
+	<div class="source-list">
+	   <table class="table table-striped">
+	       <thead>
+	           <tr>
+	               <th>编号</th>
+	               <th>名称</th>
+	               <th>操作</th>
+	           </tr>
+	       </thead>
+	       <tbody>
+	           <tr>
+	               <td width="125px">1</td>
+	               <td width="450px">【连载中】进击的巨人</td>
+	               <td>
+	                   <button class="btn btn-primary">发布</button>
+	                   <button class="btn btn-danger">删除</button>
+	               </td>
+	           </tr>
+	       </tbody>
+	       
+       </table>
+	   
+	</div>
+	
+</div>
