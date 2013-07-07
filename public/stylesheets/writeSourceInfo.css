@@ -1,11 +1,34 @@
 .release-left{
 	width: 600px;
 	float: left;
-	height: 20px;
+	height: auto;
 }
 
 .release-right{
 	width: 340px;
 	float: left;
-	height: 20px;
+	height: auto;
+}
+
+.source-title,
+.source-kind,
+.source-intro{
+	width: 600px;
+	height: 30px;
+	float:left;
+	margin-top:15px;
+}
+
+.source-intro{
+	height: auto;
+}
+
+.descr{
+	float:left;
+}
+
+#first-level,
+#second-level{
+	float:left;
+	margin-left:18px;
 }
