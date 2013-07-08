@@ -18,11 +18,11 @@ public class Software extends Model {
 	@Required
 	public String type;
 	
-	public String kind = "";
+	public String kind;
 	
-	public String size = "";
+	public String size;
 	
-	public String path = "";
+	public String path;
 	
 	
 	
