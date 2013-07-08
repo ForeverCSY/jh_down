@@ -7,14 +7,14 @@
 <div class="container">
 
     <div class="release-left">
-        #{form @Admin.releaseSource(), method:'POST'}
+        #{form @Admin.releaseSource(), method:'POST', id:'info_form'}
             *{资源名，可以与文件名不同}*
             <div class="source-title">
                 <div class="descr">
                     <h4>资源名：</h4>
                 </div>
                 
-                <input type="text" placeholder="可以于文件名不同">
+                <input type="text" placeholder="可以于文件名不同" name="source_name">
             </div>
             
             *{分类，搞二级目录，先选大类。包括软件，动漫，经典影视}*
@@ -30,9 +30,9 @@
 			    </div>
 			
 			    <div id="second-level">
-			        <select>
-			            <option>系统相关</option>
-			            <option>多媒体类</option>
+			        <select name="source_type">
+			            <option value="about_sys">系统相关</option>
+			            <option value="about_media">多媒体类</option>
 			        </select>
 			    </div>
             </div>
@@ -41,13 +41,15 @@
             <div class="source-intro">
                 <h4>简介：</h4>
                 <div>
-                    <textarea name="source-info" id="info-editor"></textarea>
+                    <textarea name="source_info" id="info-editor"></textarea>
                 </div>
             
             </div>
             
+            <input type="hidden" name="source_img_path" id="source_img_path" />
+            
             <div>
-                <button class="btn btn-primary pull-right">发布</button>                
+                <button class="btn btn-primary pull-right" type="submit" name="submit" id="release_btn">发布</button>                
             </div>
             
             
@@ -59,10 +61,13 @@
             <img id="source-img" src=${imageUUID} class="img-rounded" alt="200X200" style="width: 200px;height:200px;">        
         </div>
         
-        #{form @Admin.uploadImage(), enctype:'multipart/form-data'}
-            <input type="file" name="image">
-            <input type="submit" name="submit" value="Upload">
-        #{/form}
+        
+        #{if imageUUID == '/public/images/war3.jpg'}
+            #{form @Admin.uploadImage(), enctype:'multipart/form-data'}
+                <input type="file" name="image">
+                <input type="submit" name="submit" value="Upload">
+            #{/form}
+        #{/if}
         
     </div>
     
@@ -73,4 +78,6 @@
     editor.render("info-editor");
     //1.2.4以后可以使用一下代码实例化编辑器
     //UE.getEditor('myEditor')
+    
 </script>
+#{script 'mine.js' /}
