@@ -64,7 +64,7 @@ public class Admin extends Controller {
 		software.path = "/data/attachments/"+fileName;
 		software.file_name = fileName;
 		//获取时间
-		software.release_date = new Date().toString();
+		software.release_date = new Date();
 		//获取文件大小
 		software.size = getFileSize(software.path);
 		

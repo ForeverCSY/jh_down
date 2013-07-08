@@ -2,10 +2,12 @@ package models;
 
 import java.io.File;
 import java.util.*;
+
 import javax.persistence.*;
 
 import play.db.jpa.*;
 import play.data.validation.*;
+import sun.security.util.BigInt;
 
 
 @Entity
@@ -24,7 +26,7 @@ public class Software extends Model {
 	
 	public String path;
 	
-	public String release_date;
+	public Date release_date;
 	
 	public String file_name;
 	
@@ -34,6 +36,7 @@ public class Software extends Model {
 	
 	public String brief_intro;
 	
+	public int counter;
 	
 	public Software(String source_name, 
 			String type, 
