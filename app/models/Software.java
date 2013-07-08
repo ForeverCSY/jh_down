@@ -32,8 +32,13 @@ public class Software extends Model {
 	
 	public String intro;
 	
+	public String brief_intro;
 	
-	public Software(String source_name, String type, String intro, String img_path){
+	
+	public Software(String source_name, 
+			String type, 
+			String intro, 
+			String img_path){
 		
 		this.source_name = source_name;
 		this.type = type;

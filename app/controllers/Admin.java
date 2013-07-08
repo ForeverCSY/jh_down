@@ -47,10 +47,16 @@ public class Admin extends Controller {
 		render(imageUUID);
 	}
 	
-	public static void releaseSource(String source_name, String source_type, String source_info, String source_img_path) {
+	public static void releaseSource(String source_name, 
+			String source_type,
+			String source_info, 
+			String source_img_path,
+			String source_brief_intro) {
+		
 		Software software = new Software(source_name, source_type, source_info, source_img_path);
 		software.kind = source_img_path.substring(source_img_path.lastIndexOf('.')).toLowerCase();
 
+		software.brief_intro = source_brief_intro;
 		//软件目录，需要指定一个路径，还需要filename,filename通过session获得
 		//String file_name =session.get("fileName");
 		//文件目录需要做移动
@@ -63,6 +69,8 @@ public class Admin extends Controller {
 		software.size = getFileSize(software.path);
 		
 		software.save();
+		
+		session.remove("imageUUID");
 	}
 	
 	public static void uploadImage(File image){
