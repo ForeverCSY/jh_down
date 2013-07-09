@@ -21,15 +21,23 @@ public class Comments extends Model {
 	@Required
 	public Date date;
 	
-	public Comments(String author, String content) {
+	@Required
+	public String type;//确定是
+	
+	@Required
+	public long source_id;
+	
+	public Comments(String author,
+			String content,
+			String type,
+			long source_id) {
 		// TODO Auto-generated constructor stub
 		
 		this.author = author;
 		this.content = content;
 		this.date = new Date();
-	}
-		
-	
-	
+		this.type = type;
+		this.source_id = source_id;
+	}	
 	
 }

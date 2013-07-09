@@ -40,74 +40,25 @@
 
     <div class="index-right">
 
-        *{这个resource-container到时候也是通过list完成}*
-        
-        <div class="resource-container">
-            <div class="resource-item">
-                <div class="description">
-                    <div class="res-title" >
-                        <b>【多媒体类】</b>
-                        *{这个链接直接链接到资源的详细页面}*
-                        <a href="#">War3魔兽争霸</a>
-                        
-                    </div>
+		*{调用模版显示右侧的list}* 
+		#{index_right softs:softs, reference:reference /}
 
-                    <div class="res-info">
-                        <label><strong>简介：</strong></label>
-                        <p>
-                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                            yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-                            zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-                        </p>
-                        *{到时候考虑字符截断，添加more的标签}*
-                    </div>
-                    
-                    <div class="res-date">
-                        <strong>日期：</strong>2013-07-07
-                        <button class="btn btn-primary pull-right">下载</button>
-                    </div>
-                </div>
-
-                <div class="cover-img">
-                    <img src="@{'/public/images/war3.jpg'}" class="img-rounded" alt="140X140" style="width:140px;height:140px">
-                </div>
-
-            </div>
-        </div>
-        
-        
-        #{list items:softs, as:'soft'}
-        <div class="resource-container">
-            <div class="resource-item">
-                <div class="description">
-                    <div class="res-title" >
-                        <b>${ reference.get(soft.type).toString()}</b>
-                        *{这个链接直接链接到资源的详细页面}*
-                        <a href="#">${soft.source_name}</a>                        
-                    </div>
-                    
-                    <div class="res-info">
-                        <label><strong>简介：</strong></label>
-                        <p>
-                            ${soft.brief_intro}
-                        </p>
-                        *{到时候考虑字符截断，添加more的标签}*
-                    </div>
-                    
-                    <div class="res-date">
-                        <strong>日期：</strong>${soft.release_date}
-                        <button class="btn btn-primary pull-right">下载</button>
-                    </div>
-                    
-                </div>
-                <div class="cover-img">
-                    <img src=${soft.image} class="img-rounded" alt="140X140" style="width:140px;height:140px">
-                </div>
-            </div>
-        </div>
-        
-        #{/list}
-
-    </div>
+		<div class="pagination">
+			<ul>
+			    #{if page != 1} 
+			        <li><a href="/Application/index?page=${page-1}"> << </a></li>
+			    #{/if}
+			    
+				#{list items:1..dividePage, as:'n'}
+				    <li class= #{if n == page} "active" #{/if} ><a href="/Application/index?page=${n}">${n}</a></li>
+				#{/list}
+				
+				#{if page != dividePage}
+				    <li><a href="/Application/index?page=${page+1}"> >> </a></li>
+				#{/if}
+				
+			</ul>
+		</div>
+		
+	</div>
 </div>

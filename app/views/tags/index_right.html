@@ -1,0 +1,30 @@
+#{list items:_softs, as:'soft'}
+<div class="resource-container">
+	<div class="resource-item">
+		<div class="description">
+			<div class="res-title">
+				<b>【${ soft.type }】</b> *{这个链接直接链接到资源的详细页面}*
+				<a href="#">${soft.source_name}</a>
+			</div>
+
+			<div class="res-info">
+				<label><strong>简介：</strong></label>
+				<p>${soft.brief_intro}</p>
+				*{到时候考虑字符截断，添加more的标签}*
+			</div>
+
+			<div class="res-date">
+				<strong>日期：</strong>${soft.release_date}
+			    <a href=${soft.path} class="btn btn-primary pull-right">
+				    下载
+			    </a>        
+			</div>
+
+		</div>
+		<div class="cover-img">
+			<img src=${soft.image} class="img-rounded" alt="140X140"
+				style="width: 140px; height: 140px">
+		</div>
+	</div>
+</div>
+#{/list}

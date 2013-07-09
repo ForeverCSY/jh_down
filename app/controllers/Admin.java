@@ -61,7 +61,7 @@ public class Admin extends Controller {
 		//String file_name =session.get("fileName");
 		//文件目录需要做移动
 		String fileName = "testtesttest.rar";
-		software.path = "/data/attachments/"+fileName;
+		software.path = "/public/data/attachments/"+fileName;
 		software.file_name = fileName;
 		//获取时间
 		software.release_date = new Date();

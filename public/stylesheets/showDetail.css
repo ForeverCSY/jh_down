@@ -1,0 +1,38 @@
+#div1 {class ="container";
+	background-color: #ffffff;
+	height: 400px;
+	width: 35%;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+#div2 {class ="container";
+	background-color: #ffffff;
+	height: 400px;
+	width: 58%;
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+#div3 {class ="container";
+	background-color: #ffffff;
+	height: 40px;
+	width: 100%;
+}
+
+#div4 {class ="container";
+	background-color: #ffffff;
+	width: 100%;
+}
+
+#div5 {class ="container";
+	background-color: #ffffff;
+	height: 400px;
+	width: 100%;
+}
